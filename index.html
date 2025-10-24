@@ -3,22 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farooq Khan | Senior Database Engineer, Certified Data Science & Multi-Cloud Architect</title>
-  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect specializing in automation, cloud data systems, and large-scale data infrastructure." />
+  <title>Farooq Khan | Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</title>
+  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect specializing in automation, cloud data systems, and high-performance infrastructure." />
+  <meta name="author" content="Farooq Khan" />
+
+  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
+    :root {
+      --bg-color: #f4f7fb;
+      --text-color: #202124;
+      --card-bg: #ffffff;
+      --accent: #0070f3;
+      --link: #0070f3;
+    }
+
+    body.dark {
+      --bg-color: #0d1117;
+      --text-color: #e6edf3;
+      --card-bg: #161b22;
+      --accent: #58a6ff;
+      --link: #58a6ff;
+    }
+
     body {
       font-family: "Poppins", sans-serif;
       margin: 0;
-      background-color: #f4f7fb;
-      color: #202124;
-      line-height: 1.6;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      scroll-behavior: smooth;
     }
 
     header {
       text-align: center;
       padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, #e8f0fe, #f9fafb);
+      background: linear-gradient(135deg, #e0e7ff, #f8fafc);
       color: #111827;
       border-bottom: 1px solid #e5e7eb;
     }
@@ -26,7 +48,6 @@
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      color: #111827;
     }
 
     header h2 {
@@ -39,7 +60,7 @@
 
     .resume-btn {
       display: inline-block;
-      background: #0070f3;
+      background: var(--accent);
       color: #fff;
       padding: 0.75rem 1.5rem;
       border-radius: 30px;
@@ -51,15 +72,18 @@
 
     .resume-btn:hover {
       background: #005ecb;
-      box-shadow: 0 4px 12px rgba(0, 94, 203, 0.3);
       transform: translateY(-2px);
     }
 
     nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       background-color: #111827;
+      border-bottom: 1px solid #2d333b;
     }
 
     nav a {
@@ -70,27 +94,48 @@
     }
 
     nav a:hover {
-      background-color: #0070f3;
+      background-color: var(--accent);
       border-radius: 5px;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--card-bg);
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      width: 42px;
+      height: 42px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background-color: var(--accent);
+      color: #fff;
     }
 
     section {
       max-width: 950px;
       margin: 2rem auto;
-      background-color: #ffffff;
+      background-color: var(--card-bg);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     h2 {
-      color: #0070f3;
-      border-bottom: 2px solid #0070f3;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
     }
 
-    /* Core Skills Grid */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -103,15 +148,35 @@
       padding: 1rem;
       text-align: center;
       font-weight: 500;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       transition: all 0.3s ease-in-out;
     }
 
+    body.dark .skill-box {
+      background: #1c2128;
+      border: 1px solid #2d333b;
+    }
+
     .skill-box:hover {
-      background: #0070f3;
-      color: white;
+      background: var(--accent);
+      color: #fff;
       transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0,112,243,0.3);
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+
+    .tech-logo {
+      width: 60px;
+      height: 60px;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-logo:hover {
+      transform: scale(1.2);
     }
 
     .project-card {
@@ -123,8 +188,36 @@
       transition: transform 0.2s ease-in-out;
     }
 
+    body.dark .project-card {
+      background-color: #161b22;
+      border: 1px solid #2d333b;
+    }
+
     .project-card:hover {
       transform: translateY(-5px);
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    form button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #005ecb;
     }
 
     footer {
@@ -137,32 +230,38 @@
     }
 
     a {
-      color: #0070f3;
+      color: var(--link);
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
     }
   </style>
 </head>
+
 <body>
+  <button class="theme-toggle" id="themeToggle">🌙</button>
 
-<header>
-  <h1>Farooq Khan</h1>
-  <h2>Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</h2>
-  <p>
-    18+ years of experience building automated, resilient, and high-performance data ecosystems across AWS, Azure, GCP, and OCI.
-    Focused on DataOps, Infrastructure-as-Code, and observability-driven modernization.
-  </p>
-  <a href="Farooq_Khan_Resume.pdf" target="_blank" class="resume-btn">📄 Download Resume</a>
-</header>
-
+  <header data-aos="fade-down">
+    <h1>Farooq Khan</h1>
+    <h2>Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</h2>
+    <p>
+      18+ years of experience building automated, resilient, and high-performance data ecosystems across AWS, Azure, GCP, and OCI.
+      Focused on DataOps, Infrastructure-as-Code, and observability-driven modernization.
+    </p>
+    <a href="Farooq_Khan_Resume.pdf" target="_blank" class="resume-btn">📄 Download Resume</a>
+  </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#tech">Tech Stack</a>
     <a href="#case-studies">Case Studies</a>
     <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>
       I design and optimize complex, high-performance data systems, enabling organizations to operate at cloud scale.
@@ -171,7 +270,7 @@
     </p>
   </section>
 
-  <section id="skills">
+  <section id="skills" data-aos="fade-up">
     <h2>Core Skills</h2>
     <div class="skills-grid">
       <div class="skill-box">AWS, Azure, GCP, OCI</div>
@@ -182,55 +281,70 @@
     </div>
   </section>
 
-  <section id="case-studies">
-    <h2>Case Studies</h2>
-
-    <div class="project-card">
-      <h3>EA Sports Live Data Platform</h3>
-      <p>Architected and scaled real-time data infrastructure supporting millions of concurrent players for FIFA/FC, Battlefield, and Madden.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Multi-Cloud Modernization</h3>
-      <p>Led enterprise data migration across AWS and Azure, cutting operational costs by 30% and improving uptime to 99.98%.</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Automation & CI/CD for Data Systems</h3>
-      <p>Implemented fully automated pipelines with observability and rollback features, reducing release cycles by 45%.</p>
+  <section id="tech" data-aos="zoom-in">
+    <h2>Tech Stack</h2>
+    <div class="tech-stack">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="tech-logo" alt="AWS" title="AWS"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="tech-logo" alt="Azure" title="Azure"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="tech-logo" alt="GCP" title="GCP"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tech-logo" alt="Python" title="Python"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" class="tech-logo" alt="Terraform" title="Terraform"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="tech-logo" alt="Docker" title="Docker"/>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="tech-logo" alt="Linux" title="Linux"/>
     </div>
   </section>
 
-  <section id="blog">
-    <h2>Blog & Insights</h2>
-    <div class="project-card">
-      <h3>Choosing Between Airflow and Glue for ETL Orchestration</h3>
-      <p>A deep dive into when to use Apache Airflow versus AWS Glue for data workflows, including cost, scalability, and control trade-offs.</p>
-      <a href="#">Read more →</a>
-    </div>
-    <div class="project-card">
-      <h3>Building a Multi-Cloud Data Lake on AWS & Azure</h3>
-      <p>Lessons learned from designing a cross-cloud data lake architecture with Terraform and automated sync pipelines.</p>
-      <a href="#">Read more →</a>
-    </div>
-    <div class="project-card">
-      <h3>Automating DataOps Pipelines Using GitHub Actions</h3>
-      <p>How CI/CD automation streamlined production data refreshes and enabled safe schema migrations in enterprise environments.</p>
-      <a href="#">Read more →</a>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:farooq.khan@outlook.com">farooq.khan@outlook.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/khanfarooqali/">linkedin.com/in/khanfarooqali</a></p>
-    <p>💻 GitHub: <a href="https://github.com/datakh4n">github.com/datakh4n</a></p>
-    <p>📍 Austin, Texas, United States</p>
+  <section id="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" name="user_name" placeholder="Your Name" required />
+      <input type="email" name="user_email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    © 2025 Farooq Khan — Certified Data Science Engineer & Multi-Cloud DB Architect
+    © 2025 Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect
   </footer>
 
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    // Initialize AOS Animations
+    AOS.init({ duration: 800, once: true });
+
+    // Theme Toggle
+    const toggle = document.getElementById('themeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+    });
+    if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark');
+
+    // EmailJS Contact Form
+    (function() {
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+    })();
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => alert('Message sent successfully ✅'))
+        .catch(() => alert('Failed to send message ❌'));
+      this.reset();
+    });
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX'); // Replace with your GA measurement ID
+  </script>
 </body>
 </html>
