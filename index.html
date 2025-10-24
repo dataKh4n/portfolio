@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farooq Khan | Data Engineer Portfolio</title>
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0d1117;
+      color: #e6edf3;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0070f3, #4f46e5);
+      text-align: center;
+      color: white;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #00bcd4;
+      margin-top: 1rem;
+    }
+
+    header h1 {
+      margin: 0.5rem 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      opacity: 0.85;
+      font-size: 1.1rem;
+    }
+
+    /* ===== Navigation Bar ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #161b22;
+      border-bottom: 1px solid #2d333b;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 1rem 1.5rem;
+      color: #e6edf3;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background-color: #238636;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* ===== Sections ===== */
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: #1c2128;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.3);
+      display: none;
+      opacity: 0;
+      transform: translateY(15px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #00bcd4;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 0.4rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #00bcd4;
+    }
+
+    a {
+      color: #58a6ff;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #161b22;
+      color: #8b949e;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        padding: 0.8rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Farooq Khan</h1>
+    <p>Data Engineer | Cloud & Big Data Enthusiast</p>
+    <img src="your-photo.jpg" alt="Farooq Khan">
+  </header>
+
+  <nav>
+    <a href="#about" class="active" onclick="showTab('about', this)">About</a>
+    <a href="#skills" onclick="showTab('skills', this)">Skills</a>
+    <a href="#projects" onclick="showTab('projects', this)">Projects</a>
+    <a href="#contact" onclick="showTab('contact', this)">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="active">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm <strong>Farooq Khan</strong>, a passionate Data Engineer who loves turning raw data into powerful business insights.
+      I specialize in building scalable data pipelines, implementing efficient ETL/ELT processes, and designing cloud-native architectures
+      that empower organizations to make data-driven decisions.
+    </p>
+    <p>
+      With expertise in <strong>AWS</strong>, <strong>Python</strong>, and <strong>Big Data technologies</strong>, I focus on automation,
+      performance optimization, and delivering solutions that scale seamlessly.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Key Skills</h2>
+    <ul>
+      <li>Data Pipeline Design (Batch & Streaming)</li>
+      <li>ETL/ELT Development with Apache Airflow & Spark</li>
+      <li>Cloud Platforms: AWS (S3, Redshift, Lambda, Glue)</li>
+      <li>SQL & NoSQL Databases (PostgreSQL, DynamoDB)</li>
+      <li>Infrastructure as Code: Terraform</li>
+      <li>Data Modeling & Warehousing</li>
+      <li>CI/CD with GitHub Actions</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <h3>📦 E-commerce Analytics Pipeline</h3>
+    <p>
+      Built a scalable data pipeline for an e-commerce platform using AWS and Apache Spark.
+      The pipeline ingested multi-source transactional data, processed it in near real-time,
+      and loaded it into AWS Redshift for BI dashboards.
+    </p>
+    <p><strong>Technologies:</strong> Python, AWS S3, Redshift, Terraform, GitHub Actions</p>
+    <p><strong>Impact:</strong> Improved data processing speed by 40%, enabling real-time insights.</p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/farooqkhan" target="_blank">github.com/farooqkhan</a></p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: <a href="mailto:farooq@example.com">farooq@example.com</a></p>
+    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">linkedin.com/in/khanfarooqali</a></p>
+    <p>🐙 GitHub: <a href="https://github.com/farooqkhan" target="_blank">github.com/farooqkhan</a></p>
+  </section>
+
+  <footer>
+    © 2025 Farooq Khan — Data Engineering Portfolio
+  </footer>
+
+  <!-- ===== JavaScript for Tabs ===== -->
+  <script>
+    function showTab(tabId, element) {
+      // Hide all sections
+      document.querySelectorAll("section").forEach(sec => {
+        sec.classList.remove("active");
+      });
+
+      // Remove active state from all nav links
+      document.querySelectorAll("nav a").forEach(link => {
+        link.classList.remove("active");
+      });
+
+      // Show selected section and highlight nav
+      document.getElementById(tabId).classList.add("active");
+      element.classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
