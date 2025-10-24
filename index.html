@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Farooq Khan | Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</title>
-  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect specializing in automation, cloud data systems, and high-performance infrastructure." />
+  <meta name="description" content="Farooq Khan — Senior Database Engineer, Certified Data Science Engineer & Multi-Cloud Architect specializing in automation, observability, and high-performance data systems." />
   <meta name="author" content="Farooq Khan" />
-
-  <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
@@ -136,6 +134,7 @@
       margin-bottom: 1.5rem;
     }
 
+    /* Core Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -162,41 +161,65 @@
       transform: translateY(-4px);
     }
 
+    /* Tech Stack Carousel */
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.2rem;
       justify-content: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90px;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tech-item:hover {
+      transform: scale(1.1);
     }
 
     .tech-logo {
       width: 60px;
       height: 60px;
-      transition: transform 0.3s ease;
+      margin-bottom: 0.5rem;
     }
 
-    .tech-logo:hover {
-      transform: scale(1.2);
+    .tech-item p {
+      font-size: 0.9rem;
+      margin: 0;
+      color: var(--text-color);
     }
 
-    .project-card {
-      background-color: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s ease-in-out;
+    @media (max-width: 768px) {
+      .tech-stack {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1rem;
+        gap: 1rem;
+      }
+
+      .tech-stack::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .tech-stack::-webkit-scrollbar-thumb {
+        background-color: var(--accent);
+        border-radius: 10px;
+      }
+
+      .tech-item {
+        width: 80px;
+      }
     }
 
-    body.dark .project-card {
-      background-color: #161b22;
-      border: 1px solid #2d333b;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
+    /* Contact Form */
     form input, form textarea, form button {
       width: 100%;
       padding: 0.8rem;
@@ -229,9 +252,7 @@
       font-size: 0.9rem;
     }
 
-    a {
-      color: var(--link);
-    }
+    a { color: var(--link); }
 
     @media (max-width: 768px) {
       header h1 { font-size: 2rem; }
@@ -256,8 +277,6 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#tech">Tech Stack</a>
-    <a href="#case-studies">Case Studies</a>
-    <a href="#blog">Blog</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -284,13 +303,16 @@
   <section id="tech" data-aos="zoom-in">
     <h2>Tech Stack</h2>
     <div class="tech-stack">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" class="tech-logo" alt="AWS" title="AWS"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="tech-logo" alt="Azure" title="Azure"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="tech-logo" alt="GCP" title="GCP"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tech-logo" alt="Python" title="Python"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" class="tech-logo" alt="Terraform" title="Terraform"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="tech-logo" alt="Docker" title="Docker"/>
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="tech-logo" alt="Linux" title="Linux"/>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" class="tech-logo" alt="AWS" /><p>AWS</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" class="tech-logo" alt="Azure" /><p>Azure</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" class="tech-logo" alt="GCP" /><p>GCP</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="tech-logo" alt="Python" /><p>Python</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" class="tech-logo" alt="Terraform" /><p>Terraform</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" class="tech-logo" alt="Docker" /><p>Docker</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="tech-logo" alt="Linux" /><p>Linux</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="tech-logo" alt="MySQL" /><p>MySQL</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" class="tech-logo" alt="MS SQL Server" /><p>MS SQL Server</p></div>
+      <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" class="tech-logo" alt="JupyterLab" /><p>JupyterLab</p></div>
     </div>
   </section>
 
@@ -313,7 +335,7 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
   <script>
-    // Initialize AOS Animations
+    // AOS Animation
     AOS.init({ duration: 800, once: true });
 
     // Theme Toggle
@@ -344,7 +366,7 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX'); // Replace with your GA measurement ID
+    gtag('config', 'G-XXXXXXX'); // Replace with your GA Measurement ID
   </script>
 </body>
 </html>
