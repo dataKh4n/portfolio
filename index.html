@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Farooq Khan | Certified Data Science Engineer & Multi-Cloud DB Architect with 18+ years of experience in data infrastructure modernization across AWS, Azure, GCP, and OCI." />
+  <meta name="description" content="Farooq Khan | Certified Data Science Engineer & Multi-Cloud DB Architect with 18+ years of experience in cloud infrastructure, data engineering, and automation." />
   <meta property="og:title" content="Farooq Khan | Data Science Engineer & Multi-Cloud Architect" />
-  <meta property="og:description" content="Expert in database engineering, DataOps, and multi-cloud architecture." />
+  <meta property="og:description" content="Expert in AWS, Azure, GCP, OCI, DataOps, and Database Modernization." />
   <meta property="og:url" content="https://farooqkhan.github.io/" />
   <meta property="og:type" content="website" />
   <title>Farooq Khan | Data Science & Multi-Cloud Architect</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
   <style>
     :root {
@@ -20,6 +22,7 @@
       --card-bg: #ffffff;
       --light-text: #555;
     }
+
     [data-theme="dark"] {
       --primary: #79b8ff;
       --accent: #58a6ff;
@@ -41,7 +44,7 @@
 
     header {
       background: var(--card-bg);
-      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 6px rgba(0,0,0,0.08);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -50,10 +53,12 @@
       display: flex; justify-content: space-between; align-items: center;
       max-width: 1100px; margin: auto; padding: 1rem 2rem;
     }
-    nav h1 { color: var(--primary); font-size: 1.5rem; font-weight: 700; }
+    nav h1 { color: var(--primary); font-size: 1.4rem; font-weight: 700; }
     nav ul { list-style: none; display: flex; gap: 1.5rem; }
     nav ul li a { color: var(--text); font-weight: 500; }
     nav ul li a:hover { color: var(--accent); }
+
+    .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
 
     .theme-toggle {
       cursor: pointer;
@@ -74,7 +79,6 @@
       background: var(--card-bg);
       border-radius: 12px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      transition: background 0.3s;
     }
     section h2 {
       color: var(--primary);
@@ -84,41 +88,15 @@
       display: inline-block;
       padding-bottom: 0.3rem;
     }
+
     .hero {
       text-align: center;
       margin-top: 2rem;
+      padding: 3rem 1rem;
     }
     .hero h1 { font-size: 2.4rem; color: var(--primary); }
-    .hero h3 { color: var(--light-text); margin: 0.5rem 0 1.5rem; font-weight: 500; }
-    .hero p { max-width: 700px; margin: 0 auto; color: var(--light-text); }
-
-    ul { list-style: none; }
-    li { margin-bottom: 0.6rem; }
-
-    .timeline {
-      border-left: 3px solid var(--accent);
-      padding-left: 1.2rem;
-    }
-    .timeline-item { margin-bottom: 1rem; }
-    .timeline-item h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 0.3rem; }
-    .timeline-item span { color: var(--light-text); font-size: 0.9rem; }
-
-    .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .tech-item {
-      background: var(--bg);
-      color: var(--text);
-      padding: 0.7rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-      font-weight: 500;
-    }
-
+    .hero h3 { color: var(--light-text); margin-top: 1rem; font-weight: 500; }
+    .hero p { max-width: 700px; margin: 1rem auto; color: var(--light-text); }
     .btn {
       display: inline-block;
       background: var(--accent);
@@ -130,30 +108,66 @@
     }
     .btn:hover { background: var(--primary); }
 
+    /* Skill Bars */
+    .skill { margin: 1rem 0; }
+    .skill label { font-weight: 500; display: block; margin-bottom: 0.3rem; }
+    .bar { height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
+    .fill { height: 8px; background: var(--accent); border-radius: 4px; }
+
+    /* Case Studies */
+    .case { margin-bottom: 1.5rem; }
+    .case h4 { color: var(--primary); margin-bottom: 0.3rem; }
+    .case p { color: var(--light-text); }
+
+    /* Contact Form */
+    form { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 1rem; }
+    input, textarea {
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: var(--bg);
+      color: var(--text);
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button[type="submit"] {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button[type="submit"]:hover { background: var(--primary); }
+
     footer {
       text-align: center;
       padding: 2rem;
       background: var(--card-bg);
       color: var(--light-text);
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
 
-    @media (max-width: 700px) {
-      nav ul { display: none; }
-      section { margin: 2rem 1rem; padding: 1.5rem; }
+    @media (max-width: 768px) {
+      nav ul { display: none; flex-direction: column; background: var(--card-bg); position: absolute; top: 60px; right: 0; width: 200px; border-radius: 8px; box-shadow: 0 3px 8px rgba(0,0,0,0.1); }
+      nav ul.show { display: flex; }
+      .menu-toggle { display: block; color: var(--accent); }
+      section { margin: 1.5rem; padding: 1.5rem; }
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav>
       <h1>Farooq Khan</h1>
-      <ul>
+      <span class="menu-toggle" id="menu-toggle">☰</span>
+      <ul id="nav-menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#techstack">Tech Stack</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="theme-toggle" id="theme-toggle">🌙</button>
@@ -162,11 +176,10 @@
 
   <section class="hero">
     <h1>Farooq Khan</h1>
-    <h3>Certified Data Science Engineer & Multi-Cloud DB Architect</h3>
+    <h3>I specialize in <span id="typed"></span></h3>
     <p>
-      I specialize in end-to-end data infrastructure modernization — architecting, optimizing, and transforming
-      high-performance systems across AWS, Azure, GCP, and OCI. With 18+ years of experience, I deliver scalable,
-      automated, and resilient database solutions powering enterprise platforms.
+      Certified Data Science Engineer & Multi-Cloud DB Architect with 18+ years of experience in data infrastructure modernization,
+      automation, and large-scale system design across AWS, Azure, GCP, and OCI.
     </p>
     <a href="Farooq_Khan_Resume.pdf" class="btn">📄 Download Resume</a>
   </section>
@@ -174,103 +187,64 @@
   <section id="about">
     <h2>About</h2>
     <p>
-      Certified Data Science Engineer and Multi-Cloud DB Architect with 18 years of experience in data infrastructure
-      transformation. I architect, optimize, and lead modernization initiatives for complex, high-performance systems.
-    </p>
-    <p>
-      Expertise spans deep database architecture (MySQL/Aurora, MS SQL Server, Oracle, PostgreSQL, MongoDB) and
-      multi-cloud strategy across AWS, Azure, GCP, and OCI — integrating DataOps, automation, and CI/CD pipelines.
+      I design and optimize complex, high-performance systems, enabling data-driven scalability and innovation.
+      My background covers RDBMS (MySQL, Oracle, PostgreSQL, SQL Server) and NoSQL (MongoDB), integrating automation
+      and observability across multi-cloud environments.
     </p>
   </section>
 
-  <section id="experience">
-    <h2>Experience Timeline</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <h4>Sr. Database Engineer — Electronic Arts (EA Sports)</h4>
-        <span>2017 – Present</span>
-        <p>Lead architect for large-scale live service data systems across FIFA/FC, Battlefield, Madden, and UFC franchises.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Principal Data Architect — Global Enterprises</h4>
-        <span>2012 – 2017</span>
-        <p>Designed multi-cloud architectures and optimized large database migrations and integrations.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Oracle Database Administrator</h4>
-        <span>2007 – 2012</span>
-        <p>Administered and optimized mission-critical Oracle 10g/11g systems with high-availability clusters.</p>
-      </div>
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <div class="skill"><label>AWS</label><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+    <div class="skill"><label>Azure</label><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+    <div class="skill"><label>GCP</label><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+    <div class="skill"><label>Oracle / SQL Server</label><div class="bar"><div class="fill" style="width:95%"></div></div></div>
+    <div class="skill"><label>Python / Automation</label><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+    <div class="skill"><label>DataOps / CI-CD</label><div class="bar"><div class="fill" style="width:90%"></div></div></div>
+  </section>
+
+  <section id="case-studies">
+    <h2>Case Studies</h2>
+    <div class="case">
+      <h4>EA Sports Live Data Platform</h4>
+      <p>Architected and scaled data infrastructure for FIFA/FC, Battlefield, and Madden — supporting millions of concurrent players globally.</p>
     </div>
-  </section>
-
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul>
-      <li>AI Agents: Basics to Advanced – O'Reilly (Oct 2025)</li>
-      <li>AWS Educate Machine Learning Foundations – AWS (Oct 2025)</li>
-      <li>Generative AI Fundamentals – Databricks (Oct 2025)</li>
-      <li>Oracle Cloud Infrastructure AI Foundations Associate – Oracle (Oct 2025–27)</li>
-      <li>OCI Data Science Professional – Oracle (Oct 2025–27)</li>
-      <li>OCI Multicloud Architect Professional – Oracle (Oct 2025–27)</li>
-      <li>Oracle Database 10g Administrator Certified Associate – Oracle (Feb 2011)</li>
-      <li>Microsoft SQL Server 2005 Implementation & Maintenance – Microsoft (Jun 2009)</li>
-      <li>MongoDB for DBAs – MongoDB</li>
-    </ul>
-  </section>
-
-  <section id="techstack">
-    <h2>Tech Stack</h2>
-    <div class="tech-grid">
-      <div class="tech-item">AWS</div>
-      <div class="tech-item">Azure</div>
-      <div class="tech-item">GCP</div>
-      <div class="tech-item">OCI</div>
-      <div class="tech-item">MySQL / Aurora</div>
-      <div class="tech-item">PostgreSQL</div>
-      <div class="tech-item">MongoDB</div>
-      <div class="tech-item">MS SQL Server</div>
-      <div class="tech-item">Databricks</div>
-      <div class="tech-item">Python</div>
-      <div class="tech-item">Terraform</div>
-      <div class="tech-item">CI/CD & DataOps</div>
+    <div class="case">
+      <h4>Multi-Cloud Modernization</h4>
+      <p>Led end-to-end cloud migration across AWS and Azure, reducing operational costs by 30% and improving uptime to 99.98%.</p>
     </div>
-  </section>
-
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <p>
-      Contributed to data infrastructure and live service operations for multiple EA Sports titles — including FIFA/FC,
-      Battlefield, Madden, and UFC. Ensured global scalability, high availability, and real-time analytics for millions
-      of concurrent players.
-    </p>
-    <p>
-      Visit my <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">LinkedIn</a> for detailed case
-      studies and project breakdowns.
-    </p>
+    <div class="case">
+      <h4>Automation & CI/CD</h4>
+      <p>Implemented fully automated pipelines with observability and rollback features, reducing release time by 45%.</p>
+    </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>
-      📧 <a href="mailto:farooq.khan@outlook.com">farooq.khan@outlook.com</a><br />
-      🔗 <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">linkedin.com/in/khanfarooqali</a><br />
-      💻 <a href="https://github.com/datakh4n" target="_blank">github.com/datakh4n</a><br />
-      📍 Austin, Texas, United States
-    </p>
+    <p>📧 <a href="mailto:farooq.khan@outlook.com">farooq.khan@outlook.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">linkedin.com/in/khanfarooqali</a></p>
+    <p>💻 <a href="https://github.com/datakh4n" target="_blank">github.com/datakh4n</a></p>
+    <p>📍 Austin, Texas, United States</p>
+
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="_replyto" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <footer>
-    © 2025 Farooq Khan — Sr. Database Engineer, Certified Data Science Engineer & Multi-Cloud DB Architect
+    © 2025 Farooq Khan — Certified Data Science Engineer & Multi-Cloud DB Architect
   </footer>
 
   <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
+    // Typed text animation
+    new Typed('#typed', {
+      strings: ['Data Engineering', 'Multi-Cloud Architecture', 'Automation', 'Database Modernization'],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
     });
 
     // Theme toggle
@@ -284,6 +258,20 @@
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
       toggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        navMenu.classList.remove('show');
+      });
     });
   </script>
 </body>
