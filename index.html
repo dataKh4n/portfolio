@@ -2,211 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farooq Khan | Sr. Database Engineer </title>
+  <title>Farooq Khan | Certified Data Science Engineer & Multi-Cloud DB Architect</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* --- Base Styling --- */
-    body {
-      font-family: "Poppins", sans-serif;
-      margin: 0;
-      background-color: #0d1117;
-      color: #e6edf3;
-    }
-
-    header {
-      text-align: center;
-      padding: 4rem 1rem;
-      background: linear-gradient(135deg, #0070f3, #4f46e5);
-      color: #fff;
-    }
-
-    header img {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      border: 3px solid #00bcd4;
-      margin-top: 1rem;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin: 1rem 0 0.5rem;
-    }
-
-    header h2 {
-      font-weight: 400;
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background-color: #161b22;
-      border-bottom: 1px solid #2d333b;
-    }
-
-    nav a {
-      color: #e6edf3;
-      text-decoration: none;
-      padding: 1rem 1.5rem;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #238636;
-      color: white;
-      border-radius: 5px;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      background-color: #1c2128;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    }
-
-    h2 {
-      color: #00bcd4;
-      border-bottom: 2px solid #00bcd4;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li::before {
-      content: "• ";
-      color: #00bcd4;
-    }
-
-    a {
-      color: #58a6ff;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background-color: #161b22;
-      color: #8b949e;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-
-    .project-card {
-      background-color: #0d1117;
-      border: 1px solid #2d333b;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        padding: 0.8rem;
-      }
-    }
-  </style>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+  <!-- HEADER -->
   <header>
-    <img src="your-photo.jpg" alt="Farooq Khan" />
-    <h1>Farooq Khan</h1>
-    <h2>Data Engineer | Cloud & Big Data Enthusiast</h2>
-    <p>Building data pipelines that turn raw data into real-world insights.</p>
+    <div class="logo">
+      <h2><span>Farooq Khan</span> Data Science Engineer</h2>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hello! I'm <strong>Farooq Ali Khan</strong>, a passionate data engineer focused on designing
-      and implementing scalable data solutions. I specialize in building automated
-      pipelines, optimizing ETL/ELT processes, and leveraging cloud infrastructure
-      (AWS) to support data-driven decision-making.
-    </p>
-    <p>
-      My work combines <strong>Python</strong>, <strong>Spark</strong>, and <strong>AWS</strong>
-      technologies to deliver clean, efficient, and impactful data systems that empower analytics teams.
-    </p>
-  </section>
-
-  <section id="skills">
-    <h2>Key Skills</h2>
-    <ul>
-      <li>Data Pipeline Design (Batch & Streaming)</li>
-      <li>ETL/ELT with Apache Airflow & Spark</li>
-      <li>Cloud Platforms: AWS (S3, Redshift, Glue, Lambda)</li>
-      <li>SQL & NoSQL Databases (PostgreSQL, DynamoDB)</li>
-      <li>Infrastructure as Code with Terraform</li>
-      <li>Data Modeling & Warehousing</li>
-      <li>CI/CD using GitHub Actions</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-      <h3>📦 E-commerce Analytics Pipeline</h3>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h3>Hello, I am</h3>
+      <h1>Farooq Khan</h1>
+      <h4>Sr. Database Engineer</h4>
+      <h4>Certified Data Science Engineer & Multi-Cloud DB Architect</h4>
       <p>
-        Built a scalable data pipeline for an e-commerce platform using AWS and Apache Spark.
-        The system ingests multi-source transactional data, processes it in near real-time,
-        and loads it into AWS Redshift for BI dashboards.
+        I specialize in end-to-end data infrastructure modernization — architecting, optimizing, and transforming high-performance systems across multi-cloud environments (AWS, Azure, GCP, OCI). With over 18 years of experience, I bring deep expertise in database engineering, automation, and large-scale system design.
       </p>
-      <p><strong>Technologies:</strong> Python, AWS S3, Redshift, Terraform, GitHub Actions</p>
-      <p><strong>Impact:</strong> Improved data processing speed by 40%, enabling real-time insights.</p>
-      <a href="https://github.com/farooqkhan" target="_blank">View on GitHub</a>
+      <a href="#about" class="btn">Read More</a>
     </div>
-
-    <div class="project-card">
-      <h3>📊 Data Warehouse Automation</h3>
-      <p>
-        Designed an automated ETL workflow that synced data from APIs and transactional systems
-        into AWS Redshift, reducing manual refresh tasks by 90%.
-      </p>
-      <p><strong>Technologies:</strong> Airflow, AWS Glue, Redshift, Python</p>
-      <a href="https://github.com/farooqkhan" target="_blank">View Project</a>
+    <div class="hero-img">
+      <img src="hero.png" alt="Farooq Ali Khan" />
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:farooq@example.com">farooq@example.com</a></p>
-    <p>💼 LinkedIn: <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">linkedin.com/in/khanfarooqali</a></p>
-    <p>🐙 GitHub: <a href="https://github.com/farooqkhan" target="_blank">github.com/farooqkhan</a></p>
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-img">
+      <img src="about_hero.png" alt="About Farooq Khan" />
+    </div>
+    <div class="about-content">
+      <h2>About</h2>
+      <p>
+        <strong>Certified Data Science Engineer and Multi-Cloud DB Architect</strong> with 18 years of experience in data infrastructure transformation. I architect, optimize, and lead end-to-end modernization initiatives for complex, high-performance systems.
+      </p>
+      <p>
+        My expertise spans Deep Database Architecture (<strong>RDBMS:</strong> MySQL/Aurora, MS SQL Server, Oracle, PostgreSQL; <strong>NoSQL:</strong> MongoDB) and Multi-Cloud Strategy across <strong>AWS, Azure, GCP, and OCI</strong>, with a focus on <strong>DataOps</strong> best practices.
+      </p>
+      <p>
+        I’ve contributed to the architecture and live service operations of multiple <strong>Electronic Arts (EA Sports)</strong> franchises — including FIFA/FC, Madden, Battlefield, and UFC — personally ensuring high-volume scalability for millions of concurrent players across global game launches.
+      </p>
+
+      <h3>Key Capabilities</h3>
+      <ul>
+        <li><strong>System Transformation & Problem Solving:</strong> Leading large-scale migration projects and resolving high-complexity issues across multi-cloud environments.</li>
+        <li><strong>Advanced DevOps & Automation:</strong> Designing fully automated CI/CD pipelines with integrated test automation, telemetry, and orchestration tools.</li>
+        <li><strong>Strategic Leadership & Quality Governance:</strong> Providing technical oversight for AI/ML model performance and fostering a culture of innovation and ownership.</li>
+      </ul>
+
+      <h3>Top Skills</h3>
+      <ul class="skills">
+        <li>Multi-Cloud DB Architecture (AWS, Azure, GCP, OCI)</li>
+        <li>Database & Data Platform Engineering</li>
+        <li>DataOps / MLOps & CI/CD</li>
+        <li>Principal Data Architect</li>
+        <li>RDBMS & NoSQL Systems</li>
+      </ul>
+    </div>
   </section>
 
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="certifications">
+    <h2>Licenses & Certifications</h2>
+    <p>Recognized globally for expertise in Data Science, AI, and Multi-Cloud Architecture.</p>
+    
+    <div class="cert-grid">
+      <div class="cert-card"><h3>AI Agents: Basics to Advanced</h3><p>O'Reilly • Issued Oct 2025</p></div>
+      <div class="cert-card"><h3>AWS Educate Machine Learning Foundations</h3><p>Amazon Web Services (AWS) • Issued Oct 2025</p></div>
+      <div class="cert-card"><h3>Generative AI Fundamentals</h3><p>Databricks • Issued Oct 2025 • ID 163231176</p></div>
+      <div class="cert-card"><h3>Oracle Cloud Infrastructure AI Foundations Associate</h3><p>Oracle • Issued Oct 2025 – Expires Oct 2027</p></div>
+      <div class="cert-card"><h3>Oracle Cloud Infrastructure Data Science Professional</h3><p>Oracle • Issued Oct 2025 – Expires Oct 2027</p></div>
+      <div class="cert-card"><h3>Oracle Cloud Infrastructure Multicloud Architect Professional</h3><p>Oracle • Issued Oct 2025 – Expires Oct 2027</p></div>
+      <div class="cert-card"><h3>Bill George on Self Awareness & Leadership</h3><p>LinkedIn • Issued Aug 2017</p></div>
+      <div class="cert-card"><h3>Oracle Database 10g Administrator Certified Associate</h3><p>Oracle • Issued Feb 2011</p></div>
+      <div class="cert-card"><h3>Oracle Database 10g: Administration II</h3><p>Oracle • Issued Feb 2011 • ID OC0926230</p></div>
+      <div class="cert-card"><h3>Oracle Database 11g: SQL Fundamentals I</h3><p>Oracle • Issued Feb 2011 • ID OC0926230</p></div>
+      <div class="cert-card"><h3>Oracle Database 10g: Administration I</h3><p>Oracle • Issued Jan 2011 • ID OC0926230</p></div>
+      <div class="cert-card"><h3>Microsoft 70-431: SQL Server 2005 Implementation & Maintenance</h3><p>Microsoft • Issued Jun 2009 • ID SR5757850</p></div>
+      <div class="cert-card"><h3>Microsoft 70-443: Designing a Database Server Infrastructure</h3><p>Microsoft • Issued Jun 2009 • ID SR5757850</p></div>
+      <div class="cert-card"><h3>MongoDB for DBAs</h3><p>MongoDB</p></div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="portfolio">
+    <h2>Highlighted Projects</h2>
+    <p>Contributed to data infrastructure and live service operations for multiple <strong>EA Sports</strong> titles including FIFA/FC, Battlefield, and Madden.  
+    Visit my <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">LinkedIn</a> for more case studies.</p>
+    <div class="portfolio-gallery">
+      <div><img src="portfolio-1.jpg" alt="Cloud Architecture" /></div>
+      <div><img src="portfolio-2.jpg" alt="DataOps Pipeline" /></div>
+      <div><img src="portfolio-3.jpg" alt="Automation Tools" /></div>
+      <div><img src="portfolio-4.jpg" alt="Database Design" /></div>
+      <div><img src="portfolio-5.jpg" alt="AI Infrastructure" /></div>
+      <div><img src="portfolio-6.jpg" alt="Monitoring Dashboard" /></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:farooq.khan@outlook.com">farooq.khan@outlook.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">linkedin.com/in/khanfarooqali</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/datakh4n" target="_blank">github.com/datakh4n</a></p>
+      <p><strong>Location:</strong> United States</p>
+    </div>
+
+    <form action="#" method="post">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="text" placeholder="Subject" />
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    © 2025 Farooq Khan — Data Engineering Portfolio
+    <p>© 2025 Farooq Khan — Certified Data Science Engineer & Multi-Cloud DB Architect.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
