@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Farooq Khan | Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</title>
 
-  <!-- Google Fonts & Icons -->
+  <!-- Google Fonts & AOS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
-
-  <!-- AOS Animations -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
@@ -33,20 +30,37 @@
 
     header {
       background: linear-gradient(120deg, #e0e7ff, #f0f9ff);
-      color: var(--text);
       text-align: center;
       padding: 4rem 1rem;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     header h3 {
       font-weight: 500;
       color: #475569;
+      margin-bottom: 1rem;
     }
+
+    header p {
+      max-width: 800px;
+      margin: 0 auto 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #1e40af; }
 
     nav {
       display: flex;
@@ -59,17 +73,13 @@
       top: 0;
       z-index: 10;
     }
-
     nav a {
       text-decoration: none;
       color: var(--text);
       font-weight: 600;
       transition: color 0.2s;
     }
-
-    nav a:hover {
-      color: var(--accent);
-    }
+    nav a:hover { color: var(--accent); }
 
     section {
       padding: 3rem 1.5rem;
@@ -78,50 +88,77 @@
     }
 
     h2 {
-      color: var(--accent);
       text-align: center;
+      color: var(--accent);
       margin-bottom: 1rem;
     }
 
     h3 {
       color: var(--accent);
-      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
     }
 
-    /* Core Skills boxes */
+    /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
     }
-
     .skill-card {
       background: var(--card-bg);
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
-    /* Horizontal Tech Stack */
-    .scroll-row {
+    /* Tech Stack */
+    .tech-flex {
       display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      padding: 0.5rem 0;
-      scrollbar-width: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
     }
 
-    .scroll-row::-webkit-scrollbar { display: none; }
+    .substack {
+      flex: 1 1 480px;
+      min-width: 380px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 
-    .scroll-row img {
-      width: 48px;
-      height: 48px;
-      flex: 0 0 auto;
+    .tech-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 0.8rem;
+    }
+
+    .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 80px;
+    }
+
+    .tech-item img {
+      width: 45px;
+      height: 45px;
       transition: transform 0.2s ease;
-      border-radius: 8px;
     }
 
-    .scroll-row img:hover { transform: scale(1.2); }
+    .tech-item img:hover { transform: scale(1.15); }
+
+    .tech-item span {
+      font-size: 0.85rem;
+      margin-top: 0.3rem;
+    }
 
     /* Certifications */
     .cert-grid {
@@ -130,7 +167,6 @@
       gap: 1rem;
       margin-top: 1rem;
     }
-
     .cert-card {
       background: var(--card-bg);
       padding: 1rem;
@@ -138,28 +174,24 @@
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-
     .cert-card img {
       width: 50px;
       height: 50px;
       margin-bottom: 0.5rem;
     }
 
-    /* Blog section */
+    /* Blog */
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.5rem;
     }
-
     .blog-card {
       background: var(--card-bg);
       padding: 1rem;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-
-    .blog-card h4 { margin-bottom: 0.5rem; }
 
     /* Contact */
     form {
@@ -187,7 +219,6 @@
       font-size: 1rem;
       transition: background 0.3s;
     }
-
     button:hover { background: #1e40af; }
 
     footer {
@@ -197,22 +228,10 @@
       color: #475569;
     }
 
-    /* Dark mode */
-    body.dark {
-      background: var(--dark-bg);
-      color: var(--dark-text);
-    }
-
-    body.dark header {
-      background: linear-gradient(120deg, #1e293b, #334155);
-      color: var(--dark-text);
-    }
-
-    body.dark .skill-card,
-    body.dark .cert-card,
-    body.dark .blog-card {
-      background: var(--dark-card);
-    }
+    /* Dark Mode */
+    body.dark { background: var(--dark-bg); color: var(--dark-text); }
+    body.dark header { background: linear-gradient(120deg, #1e293b, #334155); }
+    body.dark .skill-card, body.dark .cert-card, body.dark .blog-card, body.dark .substack { background: var(--dark-card); }
 
     .dark-toggle {
       position: fixed;
@@ -248,9 +267,7 @@
 
   <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>
-      I design and optimize high-performance, cloud-scale data systems across relational (Oracle, SQL Server, PostgreSQL) and NoSQL platforms (MongoDB), with strong focus on automation, observability, and multi-cloud architecture.
-    </p>
+    <p>I design and optimize high-performance, cloud-scale data systems across relational (Oracle, SQL Server, PostgreSQL) and NoSQL platforms (MongoDB), with strong focus on automation, observability, and multi-cloud architecture.</p>
   </section>
 
   <section id="skills" data-aos="fade-up">
@@ -268,53 +285,65 @@
   <section id="tech" data-aos="fade-up">
     <h2>Tech Stack</h2>
 
-    <h3>☁️ Cloud Platforms</h3>
-    <div class="scroll-row">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" title="AWS" alt="AWS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" title="Azure" alt="Azure">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" title="GCP" alt="GCP">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" title="OCI" alt="OCI">
-    </div>
+    <div class="tech-flex">
+      <div class="substack">
+        <h3>☁️ Cloud Platforms</h3>
+        <div class="tech-row">
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><span>AWS</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><span>Azure</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><span>GCP</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"><span>OCI</span></div>
+        </div>
+      </div>
 
-    <h3>🗄️ Databases</h3>
-    <div class="scroll-row">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="MySQL" alt="MySQL">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" title="MS SQL Server" alt="MS SQL Server">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" title="PostgreSQL" alt="PostgreSQL">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" title="MongoDB" alt="MongoDB">
-    </div>
+      <div class="substack">
+        <h3>🗄️ Databases</h3>
+        <div class="tech-row">
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><span>MySQL</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg"><span>MS SQL</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><span>PostgreSQL</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"><span>MongoDB</span></div>
+        </div>
+      </div>
 
-    <h3>💻 Operating Systems</h3>
-    <div class="scroll-row">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" title="Linux" alt="Linux">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" title="Windows" alt="Windows">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg" title="macOS" alt="macOS">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" title="Android" alt="Android">
-    </div>
+      <div class="substack">
+        <h3>💻 Operating Systems</h3>
+        <div class="tech-row">
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"><span>Linux</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg"><span>Windows</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg"><span>macOS</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg"><span>Android</span></div>
+        </div>
+      </div>
 
-    <h3>⚙️ Tools & Automation</h3>
-    <div class="scroll-row">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" alt="Python">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" title="Terraform" alt="Terraform">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" title="Docker" alt="Docker">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" title="JupyterLab" alt="JupyterLab">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" alt="Git">
-    </div>
+      <div class="substack">
+        <h3>⚙️ Tools & Automation</h3>
+        <div class="tech-row">
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg"><span>Terraform</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"><span>JupyterLab</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
+        </div>
+      </div>
 
-    <h3>🧠 AI & ML Tools</h3>
-    <div class="scroll-row">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" title="TensorFlow" alt="TensorFlow">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" title="PyTorch" alt="PyTorch">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" title="Scikit-learn" alt="Scikit-learn">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" title="AWS SageMaker" alt="AWS SageMaker">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="MLflow" alt="MLflow">
+      <div class="substack">
+        <h3>🧠 AI & ML Tools</h3>
+        <div class="tech-row">
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>TensorFlow</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>PyTorch</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"><span>Scikit-learn</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><span>AWS SageMaker</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>MLflow</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="certifications" data-aos="fade-up">
     <h2>Certifications & Credentials</h2>
     <div class="cert-grid">
-      <div class="cert-card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"><p>AWS Certified Solutions Architect – Associate</p></div>
+      <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><p>AWS Certified Solutions Architect – Associate</p></div>
       <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><p>Microsoft Certified: Azure Data Engineer Associate</p></div>
       <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><p>Google Cloud Professional Data Engineer</p></div>
       <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"><p>Oracle Certified Professional: Database Administrator</p></div>
