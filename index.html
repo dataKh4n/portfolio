@@ -4,90 +4,77 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Farooq Khan | Data Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* ===== Global Styles ===== */
+    /* --- Base Styling --- */
     body {
+      font-family: "Poppins", sans-serif;
       margin: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background-color: #0d1117;
       color: #e6edf3;
-      line-height: 1.6;
-      overflow-x: hidden;
     }
 
     header {
-      background: linear-gradient(90deg, #0070f3, #4f46e5);
       text-align: center;
-      color: white;
-      padding: 2rem 1rem 1rem;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #0070f3, #4f46e5);
+      color: #fff;
     }
 
     header img {
-      width: 130px;
-      height: 130px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       border: 3px solid #00bcd4;
       margin-top: 1rem;
     }
 
     header h1 {
-      margin: 0.5rem 0;
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
     }
 
-    header p {
-      opacity: 0.85;
-      font-size: 1.1rem;
+    header h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
-    /* ===== Navigation Bar ===== */
     nav {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       background-color: #161b22;
       border-bottom: 1px solid #2d333b;
-      flex-wrap: wrap;
     }
 
     nav a {
-      padding: 1rem 1.5rem;
       color: #e6edf3;
       text-decoration: none;
-      transition: all 0.3s;
-      font-weight: 500;
+      padding: 1rem 1.5rem;
+      transition: background 0.3s;
     }
 
-    nav a:hover,
-    nav a.active {
+    nav a:hover {
       background-color: #238636;
       color: white;
       border-radius: 5px;
     }
 
-    /* ===== Sections ===== */
     section {
       max-width: 900px;
       margin: 2rem auto;
       background-color: #1c2128;
-      border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.3);
-      display: none;
-      opacity: 0;
-      transform: translateY(15px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-
-    section.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
 
     h2 {
       color: #00bcd4;
       border-bottom: 2px solid #00bcd4;
-      padding-bottom: 0.4rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
     ul {
@@ -117,74 +104,100 @@
       font-size: 0.9rem;
     }
 
+    .project-card {
+      background-color: #0d1117;
+      border: 1px solid #2d333b;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
     @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
       nav {
         flex-direction: column;
       }
       nav a {
-        padding: 0.8rem 1rem;
+        padding: 0.8rem;
       }
     }
   </style>
 </head>
 <body>
-
   <header>
+    <img src="your-photo.jpg" alt="Farooq Khan" />
     <h1>Farooq Khan</h1>
-    <p>Data Engineer | Cloud & Big Data Enthusiast</p>
-    <img src="your-photo.jpg" alt="Farooq Khan">
+    <h2>Data Engineer | Cloud & Big Data Enthusiast</h2>
+    <p>Building data pipelines that turn raw data into real-world insights.</p>
   </header>
 
   <nav>
-    <a href="#about" class="active" onclick="showTab('about', this)">About</a>
-    <a href="#skills" onclick="showTab('skills', this)">Skills</a>
-    <a href="#projects" onclick="showTab('projects', this)">Projects</a>
-    <a href="#contact" onclick="showTab('contact', this)">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- About Section -->
-  <section id="about" class="active">
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      Hello! I'm <strong>Farooq Khan</strong>, a passionate Data Engineer who loves turning raw data into powerful business insights.
-      I specialize in building scalable data pipelines, implementing efficient ETL/ELT processes, and designing cloud-native architectures
-      that empower organizations to make data-driven decisions.
+      Hello! I'm <strong>Farooq Khan</strong>, a passionate data engineer focused on designing
+      and implementing scalable data solutions. I specialize in building automated
+      pipelines, optimizing ETL/ELT processes, and leveraging cloud infrastructure
+      (AWS) to support data-driven decision-making.
     </p>
     <p>
-      With expertise in <strong>AWS</strong>, <strong>Python</strong>, and <strong>Big Data technologies</strong>, I focus on automation,
-      performance optimization, and delivering solutions that scale seamlessly.
+      My work combines <strong>Python</strong>, <strong>Spark</strong>, and <strong>AWS</strong>
+      technologies to deliver clean, efficient, and impactful data systems that empower analytics teams.
     </p>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills">
     <h2>Key Skills</h2>
     <ul>
       <li>Data Pipeline Design (Batch & Streaming)</li>
-      <li>ETL/ELT Development with Apache Airflow & Spark</li>
-      <li>Cloud Platforms: AWS (S3, Redshift, Lambda, Glue)</li>
+      <li>ETL/ELT with Apache Airflow & Spark</li>
+      <li>Cloud Platforms: AWS (S3, Redshift, Glue, Lambda)</li>
       <li>SQL & NoSQL Databases (PostgreSQL, DynamoDB)</li>
-      <li>Infrastructure as Code: Terraform</li>
+      <li>Infrastructure as Code with Terraform</li>
       <li>Data Modeling & Warehousing</li>
-      <li>CI/CD with GitHub Actions</li>
+      <li>CI/CD using GitHub Actions</li>
     </ul>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects">
     <h2>Projects</h2>
-    <h3>📦 E-commerce Analytics Pipeline</h3>
-    <p>
-      Built a scalable data pipeline for an e-commerce platform using AWS and Apache Spark.
-      The pipeline ingested multi-source transactional data, processed it in near real-time,
-      and loaded it into AWS Redshift for BI dashboards.
-    </p>
-    <p><strong>Technologies:</strong> Python, AWS S3, Redshift, Terraform, GitHub Actions</p>
-    <p><strong>Impact:</strong> Improved data processing speed by 40%, enabling real-time insights.</p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/farooqkhan" target="_blank">github.com/farooqkhan</a></p>
+
+    <div class="project-card">
+      <h3>📦 E-commerce Analytics Pipeline</h3>
+      <p>
+        Built a scalable data pipeline for an e-commerce platform using AWS and Apache Spark.
+        The system ingests multi-source transactional data, processes it in near real-time,
+        and loads it into AWS Redshift for BI dashboards.
+      </p>
+      <p><strong>Technologies:</strong> Python, AWS S3, Redshift, Terraform, GitHub Actions</p>
+      <p><strong>Impact:</strong> Improved data processing speed by 40%, enabling real-time insights.</p>
+      <a href="https://github.com/farooqkhan" target="_blank">View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <h3>📊 Data Warehouse Automation</h3>
+      <p>
+        Designed an automated ETL workflow that synced data from APIs and transactional systems
+        into AWS Redshift, reducing manual refresh tasks by 90%.
+      </p>
+      <p><strong>Technologies:</strong> Airflow, AWS Glue, Redshift, Python</p>
+      <a href="https://github.com/farooqkhan" target="_blank">View Project</a>
+    </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>📧 Email: <a href="mailto:farooq@example.com">farooq@example.com</a></p>
@@ -195,25 +208,5 @@
   <footer>
     © 2025 Farooq Khan — Data Engineering Portfolio
   </footer>
-
-  <!-- ===== JavaScript for Tabs ===== -->
-  <script>
-    function showTab(tabId, element) {
-      // Hide all sections
-      document.querySelectorAll("section").forEach(sec => {
-        sec.classList.remove("active");
-      });
-
-      // Remove active state from all nav links
-      document.querySelectorAll("nav a").forEach(link => {
-        link.classList.remove("active");
-      });
-
-      // Show selected section and highlight nav
-      document.getElementById(tabId).classList.add("active");
-      element.classList.add("active");
-    }
-  </script>
-
 </body>
 </html>
