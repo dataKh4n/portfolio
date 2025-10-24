@@ -3,23 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farooq Khan |Senior Database Engineer, Certified Data Science & Multi-Cloud Architect</title>
-  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud DB Architect specializing in automation, data infrastructure modernization, and cloud-native scalability." />
-  <meta name="keywords" content="Farooq Khan, Data Engineer, Data Scientist, Cloud Architect, AWS, Azure, GCP, SQL, Oracle, Automation" />
-  <meta name="author" content="Farooq Khan" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <title>Farooq Khan | Senior Database Engineer, Certified Data Science & Multi-Cloud Architect</title>
+  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect specializing in data modernization, automation, and large-scale system design." />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
-      --bg-color: #0d1117;
-      --text-color: #e6edf3;
-      --card-bg: #1c2128;
-      --accent: #00bcd4;
-      --link: #58a6ff;
-    }
-
-    body.light {
-      --bg-color: #f8f9fa;
+      --bg-color: #f4f7fb;
       --text-color: #202124;
       --card-bg: #ffffff;
       --accent: #0070f3;
@@ -37,24 +26,26 @@
     header {
       text-align: center;
       padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, #0070f3, #4f46e5);
-      color: #fff;
+      background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+      color: #111827;
+      border-bottom: 2px solid #e5e7eb;
     }
 
     header h1 {
       font-size: 2.5rem;
       margin: 0.5rem 0;
+      color: #111827;
     }
 
     header h2 {
       font-weight: 400;
       font-size: 1.2rem;
-      opacity: 0.9;
+      opacity: 0.85;
       margin: 0.3rem 0 1rem;
     }
 
     header p {
-      max-width: 650px;
+      max-width: 700px;
       margin: 0 auto;
       line-height: 1.6;
       font-size: 1rem;
@@ -64,34 +55,20 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background-color: #161b22;
-      border-bottom: 1px solid #2d333b;
+      background-color: #111827;
     }
 
     nav a {
-      color: #e6edf3;
+      color: #f8fafc;
       text-decoration: none;
       padding: 1rem 1.5rem;
       transition: background 0.3s;
     }
 
     nav a:hover {
-      background-color: #238636;
+      background-color: #0070f3;
       color: white;
       border-radius: 5px;
-    }
-
-    .theme-toggle {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: var(--card-bg);
-      border: 1px solid #333;
-      border-radius: 50%;
-      font-size: 1.2rem;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
     }
 
     section {
@@ -100,37 +77,42 @@
       background-color: var(--card-bg);
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
     h2 {
       color: var(--accent);
       border-bottom: 2px solid var(--accent);
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
-    ul li::before {
-      content: "• ";
-      color: var(--accent);
+    .skill-box {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: all 0.3s ease-in-out;
     }
 
-    a {
-      color: var(--link);
-    }
-
-    a:hover {
-      text-decoration: underline;
+    .skill-box:hover {
+      background: #0070f3;
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3);
     }
 
     .project-card {
-      background-color: var(--bg-color);
-      border: 1px solid #2d333b;
+      background-color: #f9fafb;
+      border: 1px solid #e5e7eb;
       border-radius: 10px;
       padding: 1.5rem;
       margin-bottom: 1.5rem;
@@ -144,47 +126,22 @@
     footer {
       text-align: center;
       padding: 1rem 0;
-      background-color: #161b22;
-      color: #8b949e;
+      background-color: #111827;
+      color: #e5e7eb;
       margin-top: 3rem;
       font-size: 0.9rem;
     }
 
-    .typed {
-      color: var(--accent);
-      font-weight: 500;
-    }
-
-    .blog-post {
-      margin-bottom: 1.5rem;
-      border-left: 4px solid var(--accent);
-      padding-left: 1rem;
-    }
-
-    .blog-post h3 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-      }
-      nav a {
-        padding: 0.8rem;
-      }
+    a {
+      color: var(--link);
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" id="themeToggle">🌙</button>
 
-  <header data-aos="fade-down">
+  <header>
     <h1>Farooq Khan</h1>
-    <h2><span class="typed"></span></h2>
+    <h2>DataOps Advocate | Certified Data Science Engineer & Multi-Cloud Architect</h2>
     <p>
       Certified Data Science Engineer & Multi-Cloud DB Architect with 18+ years of experience in data infrastructure modernization,
       automation, and large-scale system design across AWS, Azure, GCP, and OCI.
@@ -202,7 +159,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about">
     <h2>About Me</h2>
     <p>
       I design and optimize complex, high-performance data systems, enabling organizations to operate at cloud scale.
@@ -211,74 +168,60 @@
     </p>
   </section>
 
-  <section id="skills" data-aos="fade-up">
+  <section id="skills">
     <h2>Core Skills</h2>
-    <ul>
-      <li>AWS, Azure, GCP, OCI</li>
-      <li>Data Engineering & Automation (Python, Terraform)</li>
-      <li>Database Optimization (SQL Server, Oracle, PostgreSQL, MongoDB)</li>
-      <li>DataOps / CI-CD Integration</li>
-      <li>Observability & Monitoring (Prometheus, Grafana, CloudWatch)</li>
-    </ul>
+    <div class="skills-grid">
+      <div class="skill-box">AWS, Azure, GCP, OCI</div>
+      <div class="skill-box">Data Engineering & Automation (Python, Terraform)</div>
+      <div class="skill-box">Database Optimization (SQL Server, Oracle, PostgreSQL, MongoDB)</div>
+      <div class="skill-box">DataOps / CI-CD Integration</div>
+      <div class="skill-box">Observability & Monitoring (Prometheus, Grafana, CloudWatch)</div>
+    </div>
   </section>
 
-  <section id="case-studies" data-aos="fade-up">
+  <section id="case-studies">
     <h2>Case Studies</h2>
 
     <div class="project-card">
       <h3>EA Sports Live Data Platform</h3>
-      <p>
-        Architected and scaled real-time data infrastructure supporting millions of concurrent players for FIFA/FC, Battlefield, and Madden.
-      </p>
+      <p>Architected and scaled real-time data infrastructure supporting millions of concurrent players for FIFA/FC, Battlefield, and Madden.</p>
     </div>
 
     <div class="project-card">
       <h3>Multi-Cloud Modernization</h3>
-      <p>
-        Led enterprise data migration across AWS and Azure, cutting operational costs by 30% and improving uptime to 99.98%.
-      </p>
+      <p>Led enterprise data migration across AWS and Azure, cutting operational costs by 30% and improving uptime to 99.98%.</p>
     </div>
 
     <div class="project-card">
       <h3>Automation & CI/CD for Data Systems</h3>
-      <p>
-        Implemented fully automated pipelines with observability and rollback features, reducing release cycles by 45%.
-      </p>
+      <p>Implemented fully automated pipelines with observability and rollback features, reducing release cycles by 45%.</p>
     </div>
   </section>
 
-  <section id="blog" data-aos="fade-up">
+  <section id="blog">
     <h2>Blog & Insights</h2>
-    <div class="blog-post">
+    <div class="project-card">
       <h3>Choosing Between Airflow and Glue for ETL Orchestration</h3>
-      <p>
-        A deep dive into when to use Apache Airflow versus AWS Glue for data workflows, including cost, scalability, and control trade-offs.
-      </p>
+      <p>A deep dive into when to use Apache Airflow versus AWS Glue for data workflows, including cost, scalability, and control trade-offs.</p>
       <a href="#">Read more →</a>
     </div>
-
-    <div class="blog-post">
+    <div class="project-card">
       <h3>Building a Multi-Cloud Data Lake on AWS & Azure</h3>
-      <p>
-        Lessons learned from designing a cross-cloud data lake architecture with Terraform and automated sync pipelines.
-      </p>
+      <p>Lessons learned from designing a cross-cloud data lake architecture with Terraform and automated sync pipelines.</p>
       <a href="#">Read more →</a>
     </div>
-
-    <div class="blog-post">
+    <div class="project-card">
       <h3>Automating DataOps Pipelines Using GitHub Actions</h3>
-      <p>
-        How CI/CD automation streamlined production data refreshes and enabled safe schema migrations in enterprise environments.
-      </p>
+      <p>How CI/CD automation streamlined production data refreshes and enabled safe schema migrations in enterprise environments.</p>
       <a href="#">Read more →</a>
     </div>
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <section id="contact">
     <h2>Contact</h2>
     <p>📧 Email: <a href="mailto:farooq.khan@outlook.com">farooq.khan@outlook.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/khanfarooqali/" target="_blank">linkedin.com/in/khanfarooqali</a></p>
-    <p>💻 GitHub: <a href="https://github.com/datakh4n" target="_blank">github.com/datakh4n</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/khanfarooqali/">linkedin.com/in/khanfarooqali</a></p>
+    <p>💻 GitHub: <a href="https://github.com/datakh4n">github.com/datakh4n</a></p>
     <p>📍 Austin, Texas, United States</p>
   </section>
 
@@ -286,26 +229,5 @@
     © 2025 Farooq Khan — Certified Data Science Engineer & Multi-Cloud DB Architect
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    new Typed('.typed', {
-      strings: ['Data Science Engineer', 'Multi-Cloud Architect', 'Automation Specialist', 'DataOps Advocate'],
-      typeSpeed: 60,
-      backSpeed: 40,
-      loop: true
-    });
-
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-    });
-
-    if (localStorage.getItem('theme') === 'light') {
-      document.body.classList.add('light');
-    }
-  </script>
 </body>
 </html>
