@@ -4,51 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Farooq Khan | Senior Database Engineer, Certified Data Science & Multi-Cloud Architect</title>
-  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect specializing in data modernization, automation, and large-scale system design." />
+  <meta name="description" content="Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect specializing in automation, cloud data systems, and large-scale data infrastructure." />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
-    :root {
-      --bg-color: #f4f7fb;
-      --text-color: #202124;
-      --card-bg: #ffffff;
-      --accent: #0070f3;
-      --link: #0070f3;
-    }
-
     body {
       font-family: "Poppins", sans-serif;
       margin: 0;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      transition: background 0.3s, color 0.3s;
+      background-color: #f4f7fb;
+      color: #202124;
+      line-height: 1.6;
     }
 
     header {
       text-align: center;
       padding: 3rem 1rem 2rem;
-      background: linear-gradient(135deg, #e0e7ff, #f8fafc);
+      background: linear-gradient(135deg, #e8f0fe, #f9fafb);
       color: #111827;
-      border-bottom: 2px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 0.5rem 0;
+      margin-bottom: 0.5rem;
       color: #111827;
     }
 
     header h2 {
       font-weight: 400;
       font-size: 1.2rem;
-      opacity: 0.85;
-      margin: 0.3rem 0 1rem;
+      color: #374151;
+      opacity: 0.9;
+      margin-bottom: 1rem;
     }
 
-    header p {
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.6;
-      font-size: 1rem;
+    .resume-btn {
+      display: inline-block;
+      background: #0070f3;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 3px 8px rgba(0, 112, 243, 0.2);
+    }
+
+    .resume-btn:hover {
+      background: #005ecb;
+      box-shadow: 0 4px 12px rgba(0, 94, 203, 0.3);
+      transform: translateY(-2px);
     }
 
     nav {
@@ -67,26 +71,26 @@
 
     nav a:hover {
       background-color: #0070f3;
-      color: white;
       border-radius: 5px;
     }
 
     section {
       max-width: 950px;
       margin: 2rem auto;
-      background-color: var(--card-bg);
+      background-color: #ffffff;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     h2 {
-      color: var(--accent);
-      border-bottom: 2px solid var(--accent);
+      color: #0070f3;
+      border-bottom: 2px solid #0070f3;
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
     }
 
+    /* Core Skills Grid */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -99,7 +103,7 @@
       padding: 1rem;
       text-align: center;
       font-weight: 500;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       transition: all 0.3s ease-in-out;
     }
 
@@ -107,7 +111,7 @@
       background: #0070f3;
       color: white;
       transform: translateY(-4px);
-      box-shadow: 0 4px 12px rgba(0, 112, 243, 0.3);
+      box-shadow: 0 4px 12px rgba(0,112,243,0.3);
     }
 
     .project-card {
@@ -125,7 +129,7 @@
 
     footer {
       text-align: center;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       background-color: #111827;
       color: #e5e7eb;
       margin-top: 3rem;
@@ -133,23 +137,22 @@
     }
 
     a {
-      color: var(--link);
+      color: #0070f3;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Farooq Khan</h1>
-    <h2>DataOps Advocate | Certified Data Science Engineer & Multi-Cloud Architect</h2>
-    <p>
-      Certified Data Science Engineer & Multi-Cloud DB Architect with 18+ years of experience in data infrastructure modernization,
-      automation, and large-scale system design across AWS, Azure, GCP, and OCI.
-    </p>
-    <p>
-      <a href="Farooq_Khan_Resume.pdf" target="_blank">📄 Download Resume</a>
-    </p>
-  </header>
+<header>
+  <h1>Farooq Khan</h1>
+  <h2>Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</h2>
+  <p>
+    18+ years of experience building automated, resilient, and high-performance data ecosystems across AWS, Azure, GCP, and OCI.
+    Focused on DataOps, Infrastructure-as-Code, and observability-driven modernization.
+  </p>
+  <a href="Farooq_Khan_Resume.pdf" target="_blank" class="resume-btn">📄 Download Resume</a>
+</header>
+
 
   <nav>
     <a href="#about">About</a>
@@ -175,7 +178,7 @@
       <div class="skill-box">Data Engineering & Automation (Python, Terraform)</div>
       <div class="skill-box">Database Optimization (SQL Server, Oracle, PostgreSQL, MongoDB)</div>
       <div class="skill-box">DataOps / CI-CD Integration</div>
-      <div class="skill-box">Observability & Monitoring (Prometheus, Grafana, CloudWatch)</div>
+      <div class="skill-box">Observability (Prometheus, Grafana, CloudWatch)</div>
     </div>
   </section>
 
