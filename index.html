@@ -6,7 +6,7 @@
   <title>Farooq Khan | Senior Database Engineer | Certified Data Science Engineer | Multi-Cloud Architect</title>
 
   <!-- Google Fonts & AOS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <style>
@@ -32,23 +32,12 @@
       background: linear-gradient(120deg, #e0e7ff, #f0f9ff);
       text-align: center;
       padding: 4rem 1rem;
+      transition: all 0.3s;
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.3rem;
-    }
-
-    header h3 {
-      font-weight: 500;
-      color: #475569;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      max-width: 800px;
-      margin: 0 auto 1rem;
-    }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
+    header h3 { font-weight: 500; color: #475569; margin-bottom: 1rem; }
+    header p { max-width: 800px; margin: 0 auto 1rem; }
 
     .btn {
       display: inline-block;
@@ -65,6 +54,7 @@
     nav {
       display: flex;
       justify-content: center;
+      align-items: center;
       gap: 1.5rem;
       background: var(--card-bg);
       box-shadow: 0 1px 4px rgba(0,0,0,0.05);
@@ -72,7 +62,25 @@
       position: sticky;
       top: 0;
       z-index: 10;
+      transition: all 0.3s;
     }
+
+    nav.scrolled {
+      justify-content: flex-end;
+      padding-left: 6rem;
+    }
+
+    #miniName {
+      position: absolute;
+      left: 1rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    nav.scrolled #miniName { opacity: 1; }
+
     nav a {
       text-decoration: none;
       color: var(--text);
@@ -81,25 +89,12 @@
     }
     nav a:hover { color: var(--accent); }
 
-    section {
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: auto;
-    }
+    section { padding: 3rem 1.5rem; max-width: 1100px; margin: auto; }
 
-    h2 {
-      text-align: center;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
+    h2 { text-align: center; color: var(--accent); margin-bottom: 1rem; }
+    h3 { color: var(--accent); margin-bottom: 0.5rem; text-align: center; }
 
-    h3 {
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    /* Skills */
+    /* Core Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -152,7 +147,6 @@
       height: 45px;
       transition: transform 0.2s ease;
     }
-
     .tech-item img:hover { transform: scale(1.15); }
 
     .tech-item span {
@@ -175,8 +169,8 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .cert-card img {
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       margin-bottom: 0.5rem;
     }
 
@@ -232,6 +226,7 @@
     body.dark { background: var(--dark-bg); color: var(--dark-text); }
     body.dark header { background: linear-gradient(120deg, #1e293b, #334155); }
     body.dark .skill-card, body.dark .cert-card, body.dark .blog-card, body.dark .substack { background: var(--dark-card); }
+    body.dark #miniName { color: #93c5fd; }
 
     .dark-toggle {
       position: fixed;
@@ -248,6 +243,7 @@
     }
   </style>
 </head>
+
 <body>
   <header data-aos="fade-down">
     <h1>Farooq Khan</h1>
@@ -256,7 +252,8 @@
     <a href="Farooq_Khan_Resume.pdf" class="btn">📄 Download Resume</a>
   </header>
 
-  <nav>
+  <nav id="navbar">
+    <span id="miniName">Farooq Khan</span>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#tech">Tech Stack</a>
@@ -281,21 +278,21 @@
     </div>
   </section>
 
-  <!-- TECH STACK -->
   <section id="tech" data-aos="fade-up">
     <h2>Tech Stack</h2>
-
     <div class="tech-flex">
+      <!-- Cloud -->
       <div class="substack">
         <h3>☁️ Cloud Platforms</h3>
         <div class="tech-row">
-          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><span>AWS</span></div>
-          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><span>Azure</span></div>
-          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><span>GCP</span></div>
-          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"><span>OCI</span></div>
+          <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg" alt="AWS"><span>AWS</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"><span>Azure</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"><span>GCP</span></div>
+          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="OCI"><span>OCI</span></div>
         </div>
       </div>
 
+      <!-- Databases -->
       <div class="substack">
         <h3>🗄️ Databases</h3>
         <div class="tech-row">
@@ -306,6 +303,7 @@
         </div>
       </div>
 
+      <!-- OS -->
       <div class="substack">
         <h3>💻 Operating Systems</h3>
         <div class="tech-row">
@@ -316,6 +314,7 @@
         </div>
       </div>
 
+      <!-- Tools -->
       <div class="substack">
         <h3>⚙️ Tools & Automation</h3>
         <div class="tech-row">
@@ -327,13 +326,14 @@
         </div>
       </div>
 
+      <!-- AI / ML -->
       <div class="substack">
         <h3>🧠 AI & ML Tools</h3>
         <div class="tech-row">
           <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"><span>TensorFlow</span></div>
           <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"><span>PyTorch</span></div>
           <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"><span>Scikit-learn</span></div>
-          <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><span>AWS SageMaker</span></div>
+          <div class="tech-item"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"><span>AWS SageMaker</span></div>
           <div class="tech-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>MLflow</span></div>
         </div>
       </div>
@@ -343,7 +343,7 @@
   <section id="certifications" data-aos="fade-up">
     <h2>Certifications & Credentials</h2>
     <div class="cert-grid">
-      <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><p>AWS Certified Solutions Architect – Associate</p></div>
+      <div class="cert-card"><img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"><p>AWS Certified Solutions Architect – Associate</p></div>
       <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><p>Microsoft Certified: Azure Data Engineer Associate</p></div>
       <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><p>Google Cloud Professional Data Engineer</p></div>
       <div class="cert-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"><p>Oracle Certified Professional: Database Administrator</p></div>
@@ -378,17 +378,4 @@
       <textarea rows="5" placeholder="Your Message"></textarea>
       <button type="submit">Send Message</button>
     </form>
-  </section>
-
-  <footer>© 2025 Farooq Khan — Certified Data Science Engineer & Multi-Cloud Architect</footer>
-
-  <button class="dark-toggle" id="darkToggle">🌙</button>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const toggle = document.getElementById('darkToggle');
-    toggle.addEventListener('click', () => document.body.classList.toggle('dark'));
-  </script>
-</body>
-</html>
+  </section
