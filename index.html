@@ -422,6 +422,65 @@
   transition: all 0.25s ease;
 }
 
+
+/* 📬 Contact Form Styling */
+#contact {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007acc;
+}
+
+.btn-submit {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+  background-color: #00bfa6;
+  transform: translateY(-2px);
+}
+
+.form-note {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.form-note a {
+  color: #007acc;
+  text-decoration: underline;
+}
+
     /* Dark Mode */
     body.dark { background: var(--dark-bg); color: var(--dark-text); }
     body.dark header { background: linear-gradient(120deg, #1e293b, #334155); }
@@ -856,16 +915,31 @@
   <a href="Farooq_Khan_Resume.pdf" class="btn">📄 Download Resume</a>
 </div>
 
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <!-- 📬 Contact Form -->
+<section id="contact">
+  <h2>📬 Contact Me</h2>
+
+  <form action="https://formspree.io/f/mblprrzq" method="POST" class="contact-form">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="Your Name" required />
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" placeholder="Your Email" required />
+    </div>
+
+    <div class="form-group">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Send Message</button>
+  </form>
+
+  <p class="form-note">
+    This form is powered by <a href="https://formspree.io" target="_blank">Formspree</a>.
+  </p>
+</section>
+
 
   <footer>© 2025 Farooq Ali Khan — Certified Data Science Engineer & Multi-Cloud Architect</footer>
 
